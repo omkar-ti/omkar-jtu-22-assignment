@@ -16,4 +16,4 @@ COPY /main.py /utils.py /requirements.txt /code/
 RUN pip install -r requirements.txt
 
 # Run FastAPI server on the port exposed above.
-CMD uvicorn main:app 
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0"]
